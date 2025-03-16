@@ -3,3 +3,5 @@
 *.jar
 *.idea
 *.iml
+.idea
+out
