@@ -27,7 +27,7 @@ public class TwoUniqueRepetitive {
             }
         }
         for(int i=0; i<N; i++) {
-            if(checkSetBit(arr.get(i), pos)==true) {
+            if(checkSetBit(arr.get(i), pos)) {
                 xor2 = xor2^arr.get(i);
             } else {
                 xor1 = xor1^arr.get(i);

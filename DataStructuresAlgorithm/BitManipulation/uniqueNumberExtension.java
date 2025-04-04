@@ -1,3 +1,4 @@
+package BitManipulation;
 
 public class uniqueNumberExtension {
     public static void main(String[] args) throws Exception {
@@ -6,12 +7,11 @@ public class uniqueNumberExtension {
     }
 
     private static int uniqueRepeatingElementTwiceInThriceRepetitive(int[] arr) {
-        int N = arr.length;
         int ans = 0;
         for(int i=0; i<32; i++) {
             int count = 0;
-            for(int j=0; j<N; j++) {
-                if(checkSetBit(arr[j], i)) {
+            for (int k : arr) {
+                if (checkSetBit(k, i)) {
                     count++;
                 }
             }
@@ -23,9 +23,6 @@ public class uniqueNumberExtension {
     }
 
     private static boolean checkSetBit(int N, int i) {
-        if ((N | (1<<i))==N) {
-            return true;
-        }
-        return false;
+        return (N | (1 << i)) == N;
     }
 }
