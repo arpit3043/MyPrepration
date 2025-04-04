@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.DutchNationFlag;
 import java.util.Arrays;
 public class MoveAllNegative {
     public static void main(String[] args) throws Exception {
