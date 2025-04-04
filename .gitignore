@@ -4,4 +4,6 @@
 *.idea
 *.iml
 .idea
-out
+out/
+LICENSE
+*.DS_Store
