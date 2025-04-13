@@ -1,18 +1,15 @@
-package LowLevelDesign.Designs.VendingMachine;
+package Designs.VendingMachine;
 
 public enum Coin {
-    PENNY(0.01),
-    NICKEL(0.05),
-    DIME(0.1),
-    QUARTER(0.25);
 
-    private final double value;
+    PENNY(1),
+    NICKEL(5),
+    DIME(10),
+    QUARTER(25);
 
-    Coin(double value) {
+    public int value;
+
+    Coin(int value) {
         this.value = value;
-    }
-
-    public double getValue() {
-        return value;
     }
 }

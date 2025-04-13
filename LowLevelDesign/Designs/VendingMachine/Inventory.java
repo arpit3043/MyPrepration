@@ -1,32 +1,67 @@
-package LowLevelDesign.Designs.VendingMachine;
-
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+package Designs.VendingMachine;
 
 public class Inventory {
-    private final Map<Product, Integer> products;
 
-    public Inventory() {
-        products = new ConcurrentHashMap<>();
+    ItemShelf[] inventory = null;
+
+    Inventory(int itemCount) {
+        inventory = new ItemShelf[itemCount];
+        initialEmptyInventory();
     }
 
-    public void addProduct(Product product, int quantity) {
-        products.put(product, quantity);
+    public ItemShelf[] getInventory() {
+        return inventory;
     }
 
-    public void removeProduct(Product product) {
-        products.remove(product);
+    public void setInventory(ItemShelf[] inventory) {
+        this.inventory = inventory;
     }
 
-    public void updateQuantity(Product product, int quantity) {
-        products.put(product, quantity);
+    public void initialEmptyInventory() {
+        int startCode = 101;
+        for (int i = 0; i < inventory.length; i++) {
+            ItemShelf space = new ItemShelf();
+            space.setCode(startCode);
+            space.setSoldOut(true);
+            inventory[i]= space;
+            startCode++;
+        }
     }
 
-    public int getQuantity(Product product) {
-        return products.getOrDefault(product, 0);
+    public void addItem(Item item, int codeNumber) throws Exception {
+
+        for (ItemShelf itemShelf : inventory) {
+            if (itemShelf.code == codeNumber) {
+                if (itemShelf.isSoldOut()) {
+                    itemShelf.item = item;
+                    itemShelf.setSoldOut(false);
+                } else {
+                    throw new Exception("already item is present, you can not add item here");
+                }
+            }
+        }
     }
 
-    public boolean isAvailable(Product product) {
-        return products.containsKey(product) && products.get(product) > 0;
+    public Item getItem(int codeNumber) throws Exception {
+
+        for (ItemShelf itemShelf : inventory) {
+            if (itemShelf.code == codeNumber) {
+                if (itemShelf.isSoldOut()) {
+                    throw new Exception("item already sold out");
+                } else {
+
+                    return itemShelf.item;
+                }
+            }
+        }
+        throw new Exception("Invalid Code");
+    }
+
+    public void updateSoldOutItem(int codeNumber){
+        for (ItemShelf itemShelf : inventory) {
+            if (itemShelf.code == codeNumber) {
+                itemShelf.setSoldOut(true);
+            }
+        }
     }
 }

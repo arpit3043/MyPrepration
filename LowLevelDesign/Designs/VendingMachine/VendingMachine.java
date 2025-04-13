@@ -1,99 +1,43 @@
-package LowLevelDesign.Designs.VendingMachine;
+package Designs.VendingMachine;
+
+import Designs.VendingMachine.VendingState.Impl.IdleState;
+import Designs.VendingMachine.VendingState.State;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VendingMachine {
-    private static VendingMachine instance;
-    Inventory inventory;
-    private final VendingMachineState idleState;
-    private final VendingMachineState readyState;
-    private final VendingMachineState dispenseState;
-    private final VendingMachineState returnChangeState;
-    private VendingMachineState currentState;
-    private Product selectedProduct;
-    private double totalPayment;
 
-    private VendingMachine() {
-        inventory = new Inventory();
-        idleState = new IdleState(this);
-        readyState = new ReadyState(this);
-        dispenseState = new DispenseState(this);
-        returnChangeState = new ReturnChangeState(this);
-        currentState = idleState;
-        selectedProduct = null;
-        totalPayment = 0.0;
+    private State vendingMachineState;
+    private Inventory inventory;
+    private List<Coin> coinList;
+
+    public VendingMachine(){
+        vendingMachineState = new IdleState();
+        inventory = new Inventory(10);
+        coinList = new ArrayList<>();
     }
 
-    public static synchronized VendingMachine getInstance() {
-        if (instance == null) {
-            instance = new VendingMachine();
-        }
-        return instance;
+    public State getVendingMachineState() {
+        return vendingMachineState;
     }
 
-    public void selectProduct(Product product) {
-        currentState.selectProduct(product);
+    public void setVendingMachineState(IdleState vendingMachineState) {
+        this.vendingMachineState = vendingMachineState;
     }
 
-    public void insertCoin(Coin coin) {
-        currentState.insertCoin(coin);
+    public Inventory getInventory() {
+        return inventory;
     }
 
-    public void insertNote(Note note) {
-        currentState.insertNote(note);
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
     }
 
-    public void dispenseProduct() {
-        currentState.dispenseProduct();
+    public List<Coin> getCoinList() {
+        return coinList;
     }
 
-    public void returnChange() {
-        currentState.returnChange();
-    }
-
-    void setState(VendingMachineState state) {
-        currentState = state;
-    }
-
-    VendingMachineState getIdleState() {
-        return idleState;
-    }
-
-    VendingMachineState getReadyState() {
-        return readyState;
-    }
-
-    VendingMachineState getDispenseState() {
-        return dispenseState;
-    }
-
-    VendingMachineState getReturnChangeState() {
-        return returnChangeState;
-    }
-
-    Product getSelectedProduct() {
-        return selectedProduct;
-    }
-
-    void setSelectedProduct(Product product) {
-        selectedProduct = product;
-    }
-
-    void resetSelectedProduct() {
-        selectedProduct = null;
-    }
-
-    double getTotalPayment() {
-        return totalPayment;
-    }
-
-    void addCoin(Coin coin) {
-        totalPayment += coin.getValue();
-    }
-
-    void addNote(Note note) {
-        totalPayment += note.getValue();
-    }
-
-    void resetPayment() {
-        totalPayment = 0.0;
+    public void setCoinList(List<Coin> coinList) {
+        this.coinList = coinList;
     }
 }
