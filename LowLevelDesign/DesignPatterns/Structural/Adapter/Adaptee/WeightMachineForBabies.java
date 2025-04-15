@@ -4,7 +4,7 @@ import DesignPatterns.Structural.Adapter.Adaptee.WeightMachine;
 
 public class WeightMachineForBabies implements WeightMachine {
     @Override
-    public double getWeightInPound() {
+    public double getWeightInPounds() {
         return 28;
     }
 }

@@ -4,5 +4,8 @@ package DesignPatterns.Structural.Adapter.Adaptee;
 // and needs to be adapted to work with the client.
 public class WeightMachine {
     //return the weight in Pound
-    public double getWeightInPound();
+    public double getWeightInPound() {
+        // Example implementation returning a default weight
+        return 150.0;
+    }
 }
