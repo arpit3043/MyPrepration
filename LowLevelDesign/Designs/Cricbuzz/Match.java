@@ -2,6 +2,9 @@ package Designs.Cricbuzz;
 
 import java.util.Date;
 
+import Designs.Cricbuzz.Inning.InningDetails;
+import Designs.Cricbuzz.Team.Team;
+
 public class Match {
 
     Team teamA;
@@ -13,7 +16,6 @@ public class Match {
     MatchType matchType;
 
     public Match(Team teamA, Team teamB, Date matchDate, String venue, MatchType matchType) {
-
         this.teamA = teamA;
         this.teamB = teamB;
         this.matchDate = matchDate;
