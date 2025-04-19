@@ -104,7 +104,7 @@ public abstract class BaseShape implements Shape {
     }
 
     void disableSelectionStyle(Graphics graphics) {
-        graphics.setColor(Color);
+        graphics.setColor(color);
         Graphics2D g2 = (Graphics2D) graphics;
         g2.setStroke(new BasicStroke());
     }

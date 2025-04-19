@@ -7,10 +7,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Base64;
 import javax.swing.JComponent;
-import Behavioural.Command.commands.Command;
+import DesignPatterns.Behavioural.Memento.commands.Command;
 import DesignPatterns.Behavioural.Memento.history.History;
 import DesignPatterns.Behavioural.Memento.history.Memento;
 import DesignPatterns.Behavioural.Memento.shapes.CompoundShape;
+import DesignPatterns.Behavioural.Memento.shapes.Shape;
 
 public class Editor extends JComponent {
     private Canvas canvas;
@@ -43,7 +44,7 @@ public class Editor extends JComponent {
     }
 
     public void redo() {
-        if (History.redo())
+        if (history.redo())
             canvas.repaint();
     }
 

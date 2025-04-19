@@ -6,7 +6,8 @@ import DesignPatterns.Behavioural.Memento.shapes.Shape;
 public class MoveCommand implements Command {
     private Editor editor;
     private int startX, startY;
-    private int endX, endY;
+    private static int endX;
+    private int endY;
 
     public MoveCommand(Editor editor) {
         this.editor = editor;
@@ -31,7 +32,7 @@ public class MoveCommand implements Command {
         }
     }
 
-    public static void stop(int x, int y) {
+    public void stop(int x, int y) {
         endX = x;
         endY = y;
         for (Shape child : editor.getShapes().getSelected()) {

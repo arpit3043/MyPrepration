@@ -1,5 +1,6 @@
 package DesignPatterns.Behavioural.Memento;
 
+import java.awt.Color;
 import DesignPatterns.Behavioural.Memento.editor.Editor;
 import DesignPatterns.Behavioural.Memento.shapes.Circle;
 import DesignPatterns.Behavioural.Memento.shapes.CompoundShape;

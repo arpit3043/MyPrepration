@@ -13,10 +13,12 @@ import java.awt.image.BufferedImage;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import javax.swing.border.Border;
 
+import DesignPatterns.Behavioural.Memento.commands.ColorCommand;
 import DesignPatterns.Behavioural.Memento.commands.MoveCommand;
 import DesignPatterns.Behavioural.Memento.shapes.Shape;
 
@@ -143,7 +145,7 @@ class Canvas extends java.awt.Canvas {
                 if (e.getButton() != MouseEvent.BUTTON1 || moveCommand == null) {
                     return;
                 }
-                MoveCommand.stop(e.getX(), e.getY());
+                moveCommand.stop(e.getX(), e.getY());
                 editor.execute(moveCommand);
                 this.moveCommand = null;
                 repaint();
