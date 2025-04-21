@@ -1,10 +1,4 @@
-<p align="center">
-  <img src="diagrams/system-design-github-logo.png" width="350" height="200">
-</p>
-
 This repository contains free resources to learn System Design concepts and prepare for interviews.
-
-👉 Subscribe to my [AlgoMaster Newsletter](https://bit.ly/amghsd) and get a **FREE System Design Interview Handbook** in your inbox.
 
 ✅ If you are new to System Design, start here: [System Design was HARD until I Learned these 30 Concepts](https://blog.algomaster.io/p/30-system-design-concepts)
 
@@ -170,7 +164,3 @@ This repository contains free resources to learn System Design concepts and prep
 - [The Chubby lock service for loosely-coupled distributed systems](https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf)
 
 ---
-
-<p align="center">
-  <i>If you find this resource helpful, please give it a star ⭐️ and share it with others!</i>
-</p>
