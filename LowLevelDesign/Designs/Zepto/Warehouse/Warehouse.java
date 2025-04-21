@@ -8,7 +8,7 @@ import Designs.Zepto.Inventory;
 //warehouse or store, which generally manages the inventory or act as Inventory controller
 public class Warehouse {
 
-    Inventory inventory;
+    public Inventory inventory;
     Address address;
 
     //update inventory

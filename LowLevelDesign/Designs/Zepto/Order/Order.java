@@ -21,12 +21,12 @@ public class Order {
     OrderStatus orderStatus;
 
     Order(User user, Warehouse warehouse){
-      this.user = user;
-      this.productCategoryAndCountMap = user.getUserCart().getCartItems();
-      this.warehouse = warehouse;
-      this.deliveryAddress = user.address;
-      invoice = new Invoice();
-      invoice.generateInvoice(this);
+        this.user = user;
+        this.productCategoryAndCountMap = user.getUserCart().getCartItems();
+        this.warehouse = warehouse;
+        this.deliveryAddress = user.address;
+        invoice = new Invoice();
+        invoice.generateInvoice(this);
     }
 
     public void checkout(){

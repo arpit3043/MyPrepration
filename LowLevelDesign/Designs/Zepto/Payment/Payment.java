@@ -3,7 +3,7 @@ package Designs.Zepto.Payment;
 public class Payment {
     PaymentMode paymentMode;
  
-    Payment(PaymentMode paymentMode){
+    public Payment(PaymentMode paymentMode){
         this.paymentMode = paymentMode;
     }
     

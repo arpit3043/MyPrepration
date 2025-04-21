@@ -8,9 +8,9 @@ import Designs.Zepto.Cart.Cart;
 
 public class User {
 
-    int userId;
+    public int userId;
     String userName;
-    Address address;
+    public Address address;
     Cart userCartDetails;
     List<Integer> orderIds;
 

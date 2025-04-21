@@ -7,7 +7,7 @@ public class WarehouseController {
     List<Warehouse> warehouseList;
     WarehouseSelectionStrategy warehouseSelectionStrategy = null;
 
-    WarehouseController(List<Warehouse> warehouseList, WarehouseSelectionStrategy warehouseSelectionStrategy){
+    public WarehouseController(List<Warehouse> warehouseList, WarehouseSelectionStrategy warehouseSelectionStrategy){
         this.warehouseList = warehouseList;
         this.warehouseSelectionStrategy = warehouseSelectionStrategy;
     }

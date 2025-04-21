@@ -2,8 +2,6 @@ package Designs.Zepto.Warehouse;
 
 import java.util.List;
 
-import Designs.Zepto.Warehouse;
-
 public class NearestWarehouseSelectionStrategy extends WarehouseSelectionStrategy{
 
     @Override

@@ -7,7 +7,7 @@ public class Cart {
 
     Map<Integer, Integer> productCategoryIdVsCountMap;
 
-    Cart(){
+    public Cart(){
         productCategoryIdVsCountMap = new HashMap<>();
     }
 

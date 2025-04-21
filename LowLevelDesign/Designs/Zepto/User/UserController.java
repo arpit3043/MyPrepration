@@ -7,6 +7,7 @@ public class UserController {
     List<User> userList;
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
+    public
     UserController(List userList){
         this.userList = userList;
     }

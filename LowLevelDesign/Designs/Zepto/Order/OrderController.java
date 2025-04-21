@@ -13,7 +13,7 @@ public class OrderController {
     List<Order> orderList;
     Map<Integer, List<Order>> userIDVsOrders;
 
-    OrderController(){
+    public OrderController(){
         orderList = new ArrayList<>();
         userIDVsOrders = new HashMap<>();
     }
