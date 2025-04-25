@@ -1,4 +1,4 @@
-package BackTracking;
+package DataStructuresAlgorithm.BackTracking;
 import java.util.ArrayList;
 import java.util.List;
 public class LetterCasePermutation {
