@@ -1,4 +1,4 @@
-package Arrays.DutchNationFlag;
+package Arrays.Algorithms.DutchNationFlag;
 
 import java.util.Arrays;
 

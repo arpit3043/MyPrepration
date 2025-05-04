@@ -1,4 +1,5 @@
-package Arrays.SubArray;
+package Arrays.Subarray;
+
 public class SubarrayWithBoundMax {
     public static void main(String[] args) {
         int[] arr = {2,9,2,5,6};

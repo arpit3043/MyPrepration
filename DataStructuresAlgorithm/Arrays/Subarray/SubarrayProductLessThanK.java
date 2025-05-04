@@ -1,4 +1,5 @@
-package Arrays.SubArray;
+package Arrays.Subarray;
+
 public class SubarrayProductLessThanK {
     public static void main(String[] args) {
         int[] nums = {10,5,2,6};

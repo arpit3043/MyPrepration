@@ -1,4 +1,5 @@
-package Arrays.SubArray;
+package Arrays.Subarray;
+
 public class MaxSubArraySumCircular {
     public static void main(String[] args) throws Exception {
         int[] arr = {1,2,-3,-4,5};

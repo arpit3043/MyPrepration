@@ -1,32 +1,42 @@
-package BinarySearchTree;
+package DataStructuresAlgorithm.BinarySearchTree;
 public class SearchNodeBST {
-    private class Node {
+    static class TreeNode {
         int data;
-        Node left;
-        Node right;
-        private Node(int item) {
-            data = item;
-            left = right = null;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int data) {
+            this.data = data;
+            this.left = null;
+            this.right = null;
         }
     }
-    public static void main(String[] args) throws Exception {
-        SearchNodeBST tree = new SearchNodeBST();
-        Node root = tree.new Node(2);
-        root.right = tree.new Node(81);
-        root.right.left = tree.new Node(42);
-        root.right.right = tree.new Node(87);
-        root.right.right.right = tree.new Node(90);
-        root.right.left.right = tree.new Node(66);
-        root.right.left.right.left = tree.new Node(45);
-        int x = 87;
-        boolean result = searchNodeInBST(root, x);
-        if (result) {
-            System.out.println("Node2 " + x + " found in the BST.");
-        } else {
-            System.out.println("Node2 " + x + " not found in the BST.");
-        }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(7);
+        /*
+                          1
+                    |           |
+                    2           3
+                  |     |     |   |
+                  4     5     6   7
+        */
+        System.out.println("Searching Node=4 in BST: " + searchNodeInBST(root, 4)); // true
     }
-    private static boolean searchNodeInBST(Node root, int x) {
+
+    // Searching a node works in O(h) time complexity where h is the height of the tree.
+    // In the case of a balanced BST, the time complexity is O(log n) where n is the number of nodes in the tree.
+    private static boolean searchNodeInBST(TreeNode root, int x) {
+        if(root == null) {
+            return false;
+        }
+
         while(root!=null) {
             if(root.data==x){
                 return true;

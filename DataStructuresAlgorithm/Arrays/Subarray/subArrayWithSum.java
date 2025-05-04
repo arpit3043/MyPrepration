@@ -1,4 +1,5 @@
-package Arrays.SubArray;
+package Arrays.Subarray;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.lang.String;

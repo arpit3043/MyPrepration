@@ -5,6 +5,7 @@ public class TrappingRainWater {
         int N = arr.length;
         System.out.println(maximumRainWaterTrapped(arr, N));
     }
+
     private static int maximumRainWaterTrapped(int[] arr, int N) {
         int maximumAmountOfWater = 0;
         int[] leftBlocked = prefixMax(arr, N);
@@ -18,6 +19,7 @@ public class TrappingRainWater {
         }
         return maximumAmountOfWater;
     }
+
     private static int[] suffixMax(int[] arr, int N) {
         int[] ans = new int[N];
         ans[N-1] = arr[N-1];
@@ -26,6 +28,7 @@ public class TrappingRainWater {
         }
         return ans;
     }
+    
     private static int[] prefixMax(int[] arr, int N) {
         int[] ans = new int[N];
         ans[0] = arr[0];

@@ -6,6 +6,7 @@ public class suffixMaxArray {
         int[] ans = suffixMax(arr, N);
         printArray(ans);
     }
+
     private static int[] suffixMax(int[] arr, int N) {
         int[] ans = new int[N];
         ans[N-1] = arr[N-1];
@@ -14,6 +15,7 @@ public class suffixMaxArray {
         }
         return ans;
     }
+    
     private static void printArray(int[] arr) {
         int N = arr.length;
         for(int i=0; i<N; i++) {

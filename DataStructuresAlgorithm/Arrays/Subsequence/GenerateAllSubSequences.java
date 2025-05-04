@@ -1,23 +1,32 @@
 package Arrays.Subsequence;
-import java.util.ArrayList;
-public class GenerateAllSubSequences {
-    public static void main(String[] args) throws Exception {
+
+public class GenerateAllSubsequences {
+    public static void main(String[] args) {
         int[] arr = {1, 2, 3};
-        ArrayList<Integer> path = new ArrayList<>();
-        printSubsequences(arr, 0, path);
+        // generateSubsequences(arr, 0, "");
+        generateSubsequences(arr);
     }
-    private static void printSubsequences(int[] arr, int index, ArrayList<Integer> path) {
-        int N = arr.length;
-        if (index == N) {
-            if (!path.isEmpty()) {
-                System.out.println(path);
+
+    // Iterative implementation
+    private static void generateSubsequences(int[] arr) {
+        int n = arr.length;
+        for (int length = 1; length <= n; length++) {
+            for (int start = 0; start <= n - length; start++) {
+                for (int i = start; i < start + length; i++) {
+                    System.out.print(arr[i] + " ");
+                }
+                System.out.println();
             }
-        } else {
-            printSubsequences(arr, index + 1, path);
-            path.add(arr[index]);
-            printSubsequences(arr, index + 1, path);
-            path.remove(path.size() - 1);
         }
-        return;
     }
+
+    // Recursive implementation
+    // private static void generateSubsequences(int[] arr, int index, String current) {
+    //     if (index == arr.length) {
+    //         System.out.print(current + " ");
+    //         return;
+    //     }
+    //     generateSubsequences(arr, index + 1, current);
+    //     generateSubsequences(arr, index + 1, current + arr[index] + "");
+    // }
 }

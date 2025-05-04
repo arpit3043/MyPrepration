@@ -1,4 +1,5 @@
-package Arrays.Subsequences;
+package Arrays.Subsequence;
+
 import java.util.Arrays;
 public class SubsequenceLengthK {
     public static void main(String[] args) {

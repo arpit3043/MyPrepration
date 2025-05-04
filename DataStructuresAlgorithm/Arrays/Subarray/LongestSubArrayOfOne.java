@@ -1,4 +1,5 @@
-package Arrays.SubArray;
+package Arrays.Subarray;
+
 public class LongestSubArrayOfOne {
     public static void main(String[] args) throws Exception {
         int[] arr = {0,1,1,1,0,1,1,0,1};

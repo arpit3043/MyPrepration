@@ -3,14 +3,15 @@ public class querySum {
     public static void main(String[] args) throws Exception {
         int[] arr = {2, 3, 4, 0, 0, 3, 2, 0};
         int[][] queries = {
-                {2, 3, 3},
-                {4, 6, 3},
-                {7, 7, -4},
-                {2, 7, 6}
+            {2, 3, 3},
+            {4, 6, 3},
+            {7, 7, -4},
+            {2, 7, 6}
         };
         int[] ans = carryForwardQuerySum(arr.length, queries);
         printArray(ans);
     }
+    
     private static int[] carryForwardQuerySum(int N, int[][] queries) {
         int[] ans = new int[N];
         for (int i = 0; i < queries.length; i++) {

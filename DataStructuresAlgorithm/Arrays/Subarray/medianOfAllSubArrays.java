@@ -1,4 +1,5 @@
-package Arrays.SubArray;
+package Arrays.Subarray;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

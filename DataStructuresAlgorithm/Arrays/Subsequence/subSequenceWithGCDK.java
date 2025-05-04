@@ -1,4 +1,5 @@
-package Arrays.Subsequences;
+package Arrays.Subsequence;
+
 public class subSequenceWithGCDK {
     public static void main(String[] args) throws Exception {
         int[] arr = {4,6,3,8};

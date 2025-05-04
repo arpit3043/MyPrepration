@@ -1,4 +1,5 @@
-package Arrays.SubArray;
+package Arrays.Subarray;
+
 public class MaximumProductSubSet {
     public static void main(String[] args) throws Exception {
         int[] nums = {-6, 4, -5, 8, -10, 0, 8};

@@ -1,8 +1,11 @@
-package Graph;
+package Graph.DFS;
+
 import java.util.ArrayList;
 import java.lang.String;
 import java.lang.Integer;
 import java.util.List;
+
+// In DFS order is random but we go neighbour first and then go to the next neighbour and so on.
 public class DepthFirstSearch {
     public static void main(String[] args) throws Exception {
         int V = 5;

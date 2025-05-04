@@ -1,12 +1,12 @@
-package Arrays.SubArray;
+package Arrays.Subarray;
 public class LargestSubArraySumMinimized {
     public static void main(String[] args) throws Exception {
         int[] a = {10, 4, 5, 10, 9, 10};
         int K=4;
         System.out.println(largestSubarraySumMinimized(a, K));
     }
+
     private static int largestSubarraySumMinimized(int []a, int k) {
-        int n = a.length;
         int low = maxElement(a);
         int high = summition(a);
         while(low<= high){

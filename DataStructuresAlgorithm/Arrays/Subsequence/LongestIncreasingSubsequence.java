@@ -1,4 +1,5 @@
-package Arrays.Subsequences;
+package Arrays.Subsequence;
+
 import java.util.ArrayList;
 public class LongestIncreasingSubsequence {
     public static void main(String[] args) throws Exception {
