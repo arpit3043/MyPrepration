@@ -1,7 +1,9 @@
-package DataStructuresAlgorithm.BinarySearchTree;
+package BinarySearchTree;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+
 public class ValidateBST {
     static class TreeNode {
         int val;
@@ -32,6 +34,7 @@ public class ValidateBST {
         System.out.println("Is the tree a BST? " + isBST(root)); // false
         System.out.println("Is the tree a BST? " + isBSTIterative(root));
         System.out.println("Is the tree a BST? " + isBSTRecursive(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
+        System.out.println("Is the tree a BST? " + isValidBST(root));
         // The above tree is a BST because for every node, the left child is less than the node and the right child is greater than the node.
         // The above tree is not a BST because 2 is not less than 1 and 3 is not greater than 1.
     }
@@ -103,5 +106,19 @@ public class ValidateBST {
             root = root.right;
         }
         return true;
+    }
+
+    private static boolean isValidBST(TreeNode root) {
+        return valid(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+
+    private static boolean valid(TreeNode node, long left, long right) {
+        if (node == null) {
+            return true;
+        }
+        if (!(left < node.val && node.val < right)) {
+            return false;
+        }
+        return valid(node.left, left, node.val) && valid(node.right, node.val, right);
     }
 }

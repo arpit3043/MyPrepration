@@ -20,6 +20,23 @@ public class DiameterOfBST {
         root.right.right.right = new TreeNode2(8);
         int diameter = diameterOfBinaryTree(root);
         System.out.println("Diameter of the binary tree is: " + diameter);
+        System.out.println("Diameter of the binary tree with optimized function is" + diameterOfBinaryTreeOptimized(root));
+    }
+
+    private static int diameterOfBinaryTreeOptimized(TreeNode2 root) {
+        int[] res = new int[1];
+        dfs(root, res);
+        return res[0];
+    }
+
+    private static int dfs(TreeNode2 root, int[] res) {
+        if (root == null) {
+            return 0;
+        }
+        int left = dfs(root.left, res);
+        int right = dfs(root.right, res);
+        res[0] = Math.max(res[0], left + right);
+        return 1 + Math.max(left, right);
     }
     private static int diameterOfBinaryTree(TreeNode2 root) {
         if(root == null) {

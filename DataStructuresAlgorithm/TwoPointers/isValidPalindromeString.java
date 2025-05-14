@@ -1,4 +1,5 @@
 package TwoPointers;
+
 import java.lang.String;
 public class isValidPalindromeString {
     public static void main(String[] args) throws Exception {
@@ -9,36 +10,56 @@ public class isValidPalindromeString {
     }
 
     private static boolean isPalindrome(String s) {
-        if (s.isEmpty()) {
-            return true;
-        }
         int start = 0;
-        int last = s.length() - 1;
-        while (start <= last) {
-            char currFirst = s.charAt(start);
-            char currLast = s.charAt(last);
-            if (isLetterOrDigit(currFirst)) {
+        int end = s.length() - 1;
+
+        while (start < end) {
+            while (start < end && !isAlphaNum(s.charAt(start))) {
                 start++;
-            } else if (isLetterOrDigit(currLast)) {
-                last--;
-            } else {
-                if (toLowerCase(currFirst) != toLowerCase(currLast)) {
-                    return false;
-                }
-                start++;
-                last--;
             }
+            while (end > start && !isAlphaNum(s.charAt(end))) {
+                end--;
+            }
+            if (toLowerCase(s.charAt(start)) != toLowerCase(s.charAt(end))) {
+                return false;
+            }
+            start++;
+            end--;
         }
         return true;
     }
 
-    private static boolean isLetterOrDigit(char c) {
-        return (c < 'a' || c > 'z') && (c < 'A' || c > 'Z') && (c < '0' || c > '9');
+    private static boolean isAlphaNum(char c) {
+        return isAlphabet(c) || isDigit(c);
+    }
+
+    private static boolean isAlphabet(char c) {
+        String alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        for (int i = 0; i < alphabets.length(); i++) {
+            if (c == alphabets.charAt(i)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isDigit(char c) {
+        String digits = "0123456789";
+        for (int i = 0; i < digits.length(); i++) {
+            if (c == digits.charAt(i)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static char toLowerCase(char c) {
-        if (c >= 'A' && c <= 'Z') {
-            return (char) (c + ('a' - 'A'));
+        String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lower = "abcdefghijklmnopqrstuvwxyz";
+        for (int i = 0; i < 26; i++) {
+            if (c == upper.charAt(i)) {
+                return lower.charAt(i);
+            }
         }
         return c;
     }
