@@ -1,4 +1,4 @@
-package Designs.AirlineManagementSystem.seat;
+package AirlineManagementSystem.seat;
 
 public enum SeatStatus {
     AVAILABLE,

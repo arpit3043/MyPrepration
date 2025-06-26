@@ -1,8 +1,8 @@
-package Designs.AirlineManagementSystem.booking;
+package AirlineManagementSystem.booking;
 
-import Designs.AirlineManagementSystem.Passenger;
-import Designs.AirlineManagementSystem.flight.Flight;
-import Designs.AirlineManagementSystem.seat.Seat;
+import AirlineManagementSystem.Passenger;
+import AirlineManagementSystem.flight.Flight;
+import AirlineManagementSystem.seat.Seat;
 
 public class Booking {
     private final String bookingNumber;

@@ -1,4 +1,4 @@
-package Designs.AirlineManagementSystem.booking;
+package AirlineManagementSystem.booking;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import Designs.AirlineManagementSystem.Passenger;
-import Designs.AirlineManagementSystem.flight.Flight;
-import Designs.AirlineManagementSystem.seat.Seat;
+import AirlineManagementSystem.Passenger;
+import AirlineManagementSystem.flight.Flight;
+import AirlineManagementSystem.seat.Seat;
 
 public class BookingManager {
     private static BookingManager instance;

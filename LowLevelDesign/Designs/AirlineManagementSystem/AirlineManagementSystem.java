@@ -1,16 +1,16 @@
-package Designs.AirlineManagementSystem;
+package AirlineManagementSystem;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import Designs.AirlineManagementSystem.booking.Booking;
-import Designs.AirlineManagementSystem.booking.BookingManager;
-import Designs.AirlineManagementSystem.flight.Flight;
-import Designs.AirlineManagementSystem.flight.FlightSearch;
-import Designs.AirlineManagementSystem.payment.Payment;
-import Designs.AirlineManagementSystem.payment.PaymentProcessor;
-import Designs.AirlineManagementSystem.seat.Seat;
+import AirlineManagementSystem.booking.Booking;
+import AirlineManagementSystem.booking.BookingManager;
+import AirlineManagementSystem.flight.Flight;
+import AirlineManagementSystem.flight.FlightSearch;
+import AirlineManagementSystem.payment.Payment;
+import AirlineManagementSystem.payment.PaymentProcessor;
+import AirlineManagementSystem.seat.Seat;
 
 public class AirlineManagementSystem {
     private final List<Flight> flights;

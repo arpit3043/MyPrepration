@@ -1,4 +1,4 @@
-package Designs.AirlineManagementSystem.flight;
+package AirlineManagementSystem.flight;
 
 import java.util.stream.Collectors;
 import java.time.LocalDate;

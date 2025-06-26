@@ -1,13 +1,13 @@
-package Designs.AirlineManagementSystem;
+package AirlineManagementSystem;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import Designs.AirlineManagementSystem.booking.Booking;
-import Designs.AirlineManagementSystem.flight.Flight;
-import Designs.AirlineManagementSystem.seat.Seat;
-import Designs.AirlineManagementSystem.seat.SeatType;
+import AirlineManagementSystem.booking.Booking;
+import AirlineManagementSystem.flight.Flight;
+import AirlineManagementSystem.seat.Seat;
+import AirlineManagementSystem.seat.SeatType;
 
 public class AirlineManagementSystemDemo {
     public static void run() {

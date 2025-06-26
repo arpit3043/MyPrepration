@@ -1,10 +1,10 @@
-package Designs.AirlineManagementSystem.flight;
+package AirlineManagementSystem.flight;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import Designs.AirlineManagementSystem.seat.Seat;
+import AirlineManagementSystem.seat.Seat;
 
 public class Flight {
     private final String flightNumber;

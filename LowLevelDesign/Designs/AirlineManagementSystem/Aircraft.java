@@ -1,4 +1,4 @@
-package Designs.AirlineManagementSystem;
+package AirlineManagementSystem;
 
 public class Aircraft {
     private final String tailNumber;

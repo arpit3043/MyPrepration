@@ -1,4 +1,4 @@
-package Designs.AirlineManagementSystem.payment;
+package AirlineManagementSystem.payment;
 
 public enum PaymentStatus {
     PENDING,
